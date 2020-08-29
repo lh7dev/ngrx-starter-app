@@ -1,0 +1,7 @@
+<div class="component-wrap" *ngIf="tutorials">
+  <h3>Tutorials</h3>
+  <ul>
+    <li *ngFor='let tutorial of tutorials | async'>
+      <a [href]="tutorial.url" target='_blank'>id:{{tutorial.id}} - {{tutorial.name}}</a> | <button (click)="removeTutorial(tutorial)">delete</button></li>
+  </ul>
+</div>
